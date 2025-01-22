@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 254, 254, 0.849);  
+}
+
+body{
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../Images/IMG-20240703-WA0001.jpg');
+    background-size: cover;
+}
+
+.card{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0px 2px 20px rgb(156, 250, 255);
+}
+
+.sec-1{
+    /* color: black; */
+    float: left;
+    width: 60%;
+    height: 100%;
+    background: url('../Images/IMG-20240703-WA0004.jpg');
+    background-size: cover;
+    /* background: rgba(0, 0, 0, 0.701); */
+    position: relative;
+}
+
+.sec-1 .top{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 20px;
+    margin: 20px;
+    font-weight: 600;
+}
+
+.sec-1 .mid1{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    padding: 50px;
+    position: absolute;
+    top: 150px;
+    margin: auto 100px;
+}
+.sec-1 .mid2{
+    height: 50%;
+    width: 60%;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    padding: 50px;
+    position: absolute;
+    top: 150px;
+    margin: auto 100px;
+}
+
+
+.sec-1 .top div{
+    float:right;
+    clear: both;
+    color: black;
+}
+
+.sec-1 .bottom{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.sec-1 .bottom .left{
+    float: left;
+    margin: 10px 20px;
+}
+
+.sec-1 .bottom .left h2{
+    float: left;
+    clear: both;
+    font-size: x-large;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.sec-1 .bottom .left p{
+    float: left;
+    clear: both;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.sec-1 .bottom .right{
+    float: left;
+}
+
+
+
+.sec-1 .bottom .right h1{
+    float: left;
+    font-size: 50px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+.sec-2{
+    float: left;
+    background: rgba(0, 0, 0, 0.701);
+    height: 100%;
+    width: 40%;
+    text-align: center;
+}
+
+.sec-2 .top img{
+    margin: 40px;
+    height: 100px;
+    width: 100px;
+}
+
+.sec-2 .top h1{
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+hr{
+    width: 80%;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 0 auto;
+}
+
+.sec-2 .bottom .search{
+    margin: 10px;
+}
+
+.sec-2 .bottom .search input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 150px;
+    padding: 5px;
+}
+
+.sec-2 .bottom .search input::placeholder{
+    color: rgba(255, 255, 255, 0.700);
+}
+
+.sec-2 .bottom .search button{
+    background: rgba(255, 255, 255, 0.152);
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.sec-2 .bottom .table{
+    font-size: small;
+    margin: 30px;
+}
+
+.sec-2 .bottom table{
+    font-size: small;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 5px;
+    width: 100%;
+}
+
+table td{
+    border-top: 1px solid gray;
+    padding: 5px;
+}
+
+
+@media screen and (max-width:900px) and (min-width:750px){
+    .card{
+        position: absolute;
+        width: 100%;
+        margin: 75px;
+        padding: 10px;
+    }
+
+    .sec-1 .bottom .right h1{
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:750px) and (min-width:650px){
+    .sec-1 .mid1{
+        margin: auto 30px;
+    }
+    .sec-1 .mid2{
+        margin: auto 30px;
+    }
+    .card{
+        position: absolute;
+        width: 100%;
+        margin: 50px;
+        padding: 10px;
+    }
+
+    .sec-1 .bottom .right h1{
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:650px) and (min-width:450px){
+    .sec-1 .mid1{
+        margin: auto 30px;
+    }
+    .sec-1 .mid2{
+        margin: auto 30px;
+    }
+    .card{
+        position: absolute;
+        width: 100%;
+        margin: 50px;
+        padding: 10px;
+    }
+
+    .alert{
+        margin: 20px;
+    }
+    
+    .sec-1{
+        width: 100%;
+        height: 200px;
+    }
+    
+    .sec-1 .top div{
+        color: rgb(255, 254, 254);
+    }
+
+    .sec-1 .bottom .left{
+        font-size: 20px;
+        margin: 0px 0px 5px 10px;
+    }
+
+    .sec-1 .bottom .left h2{
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+    .sec-1 .bottom .right h1{
+        font-size: 40px;
+        right: 20px;
+        bottom: 5px;
+    }
+    
+    .sec-2{
+        width: 100%;
+        height: 380px;
+        text-align: center;
+    }
+
+    .sec-2 .top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sec-2 .top img{
+        height: 75px;
+        width: 75px;
+        margin: 20px 50px 20px 0px;
+    }
+    
+    .sec-2 .top h1{
+        margin-bottom: 5px;
+        font-weight: 100;
+    }
+    
+    hr{
+        width: 80%;
+        border: 1px solid rgb(128, 128, 128);
+        margin: 0 auto;
+    }
+    
+    .sec-2 .bottom .search{
+        margin: 15px 0px 25px 0px;
+    }
+    
+    .sec-2 .bottom .search input{
+        width: 200px;
+    }
+    
+    .sec-2 .bottom .search input::placeholder{
+        text-align: center;
+    }
+    
+    .sec-2 .bottom p{
+        font-size: small;
+    }
+
+    .sec-2 .bottom .table{
+        margin: 0px 30px;
+    }
+}
+
+@media screen and (max-width:450px){
+    .sec-1 .mid1{
+        margin: auto 25px;
+    }
+    .sec-1 .mid2{
+        margin: auto 30px;
+    }
+    .card{
+        position: absolute;
+        width: 100%;
+        margin: 50px;
+        padding: 10px;
+    }
+
+    .alert{
+        margin: 50px;
+    }
+    
+    .sec-1{
+        width: 100%;
+        height: 200px;
+    }
+    
+    .sec-1 .top div{
+        color: rgb(255, 254, 254);
+    }
+
+    .sec-1 .bottom .left{
+        font-size: 20px;
+        margin: 0px 0px 5px 10px;
+    }
+
+    .sec-1 .bottom .left h2{
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+    .sec-1 .bottom .right h1{
+        font-size: 40px;
+        right: 20px;
+        bottom: 5px;
+    }
+    
+    .sec-2{
+        width: 100%;
+        height: 380px;
+        text-align: center;
+    }
+
+    .sec-2 .top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sec-2 .top img{
+        height: 75px;
+        width: 75px;
+        margin: 20px 50px 20px 0px;
+    }
+    
+    .sec-2 .top h1{
+        margin-bottom: 5px;
+        font-weight: 100;
+    }
+    
+    hr{
+        width: 80%;
+        border: 1px solid rgb(128, 128, 128);
+        margin: 0 auto;
+    }
+    
+    .sec-2 .bottom .search{
+        margin: 15px 0px 25px 0px;
+    }
+    
+    .sec-2 .bottom .search input{
+        width: 200px;
+    }
+    
+    .sec-2 .bottom .search input::placeholder{
+        text-align: center;
+    }
+    
+    .sec-2 .bottom p{
+        font-size: small;
+    }
+
+    .sec-2 .bottom .table{
+        margin: 0px 30px;
+    }
+}

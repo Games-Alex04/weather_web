@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="{% static 'css/weather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+</head>
+<body>
+        <div class="card">
+            <div class="sec-1">
+                <div class="top">
+                    <div><span id="region">{{ region }}</span></div>
+                    <div><span id="country">{{ country }}</span></div>
+                </div>
+                <div class="mid1" id="internet">
+                    <div><img src="{% static 'Images/internet error.jpg' %}" alt="" height="200px" width="200px"></div>
+                    <div style="font-weight: bolder;">check your internet!!</div>
+                    {% if exception_of_internet %}
+                    <style>
+                        #internet{
+                            display: flex;
+                        }
+                    </style>
+                    {% else %}
+                    <style>
+                        #internet{
+                            display: none;
+                        }
+                    </style>
+                    {% endif %}
+                </div>
+                <div class="mid2" id="location">
+                    <div><img src="{% static 'Images/location.jpg' %}" alt="" height="200px" width="200px"></div>
+                    <div style="font-weight: bolder;">location not found!!</div>
+                    {% if exception_of_location %}
+                    <style>
+                        #location{
+                            display: flex;
+                        }
+                    </style>
+                    {% else %}
+                    <style>
+                        #location{
+                            display: none;
+                        }
+                    </style>
+                    {% endif %}
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <h2><span id="city-name">
+                            {{ cityname }}</span></h2>
+                        <p>Time: <span id="city-time">{{ citytime }}</span></p>
+                    </div>
+                    <div class="right">
+                        <h1><span id="temp">{{ citytemp }}</span>&degc</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-2">
+                <form action="/weather/home" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                <div class="top">
+                    <img src="{{ weather_img }}" class="weather_img" alt="">
+                    <h1><span id="weather_con">{{ weather_con }}</span></h1>
+                </div>
+                <hr>
+                <div class="bottom">
+                    <div class="search">
+                        <input type="text" id="city" name="city" placeholder="Search any city" required>
+                        <button type="submit" id="submit" value="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>   
+                    <p><span id="countryandregion">{{ cityname }}-{{ region }}</span></p>
+
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <td>Feelslike:</td>
+                                <td><span id="feelslike">{{ feelslike }}</span>&degc</td>
+                            </tr>
+                            <tr>
+                                <td>Humidity</td>
+                                <td><span id="humidity">{{ humidity }}</span>%</td>
+                            </tr>
+                            <tr>
+                                <td>UV Index</td>
+                                <td><span id="UV">{{ UV_index }}</span></td>
+                            </tr>
+                            <tr>
+                                <td>Wind Speed</td>
+                                <td><span id="wind_speed">{{ wind_speed }}</span>Km/h</td>
+                            </tr>
+                            <tr>
+                                <td>Wind direction</td>
+                                <td><span id="wind_dir">{{ wind_dir }}</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
